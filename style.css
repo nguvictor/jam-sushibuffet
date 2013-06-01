@@ -77,6 +77,14 @@
 	background-repeat:no-repeat;
 }
 
+#stack{
+	position: absolute;
+	width:100px;
+	height:500px;
+	left: 475px;
+	top: 0px;
+}
+
 .hide{
 	position: absolute; 
 	overflow: hidden; 
