@@ -4,13 +4,12 @@
 	
 
 $(document).ready(function() {
-	var beginCountDownNumber = 3;
-	var countDown = 60;
+	var beginCountDownNumber = 0; //Count down to begin
+	var countDown = 20; //Count down until game ends
 	//Show Dialog press spacee to start
 	
 	//Regular Count down
 	function CountDownStep(){
-		console.log("Cot down step");
 		setTimeout(function(){
 			
 			//If we still have time on the clock keep counting down
@@ -74,8 +73,7 @@ $(document).ready(function() {
 	  if (event.which == 32) {
 		  //If the game isn't running
 		  if(!isRunning){
-			
-			
+
 			//Display initial countdown!
 			beginCountDown();
 			isRunning = true;
