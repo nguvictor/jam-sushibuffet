@@ -63,11 +63,11 @@
 	position: absolute;
 	width:100px;
 	height:68px;
-	left:0px;
-	top:0px;
+	
 	background-image:url('img/sushi.png');
 	background-repeat:no-repeat;
 }
+
 
 #bite0{
 	position: absolute;
@@ -92,9 +92,9 @@
 #stack{
 	position: absolute;
 	width:100px;
-	height:500px;
-	left: 475px;
-	top: 0px;
+	height:68px;
+	left:450px;
+	top:400px;
 }
 
 #nomming{
@@ -108,26 +108,29 @@
 #begincountdown{
 	position: absolute;
 	width:100px;
-	height:500px;
-	left: 475px;
-	top: 0px;
+	height:100px;
+	top:150px;
+	left: 350px;
+	background-color: #000;
 }
 
 #countdown{
 	position: absolute;
 	width:100px;
-	height:500px;
-	left: 475px;
+	height:100px;
+	left:350px;
 	top: 0px;
+	background-color: #444;
 }
 
 
 #dialog{
 	position: absolute;
-	width:100px;
-	height:500px;
-	left: 475px;
-	top: 0px;
+	width:600px;
+	height:300px;
+	left: 100px;
+	top: 100px;
+	background-color: #888;
 }
 
 .hide{
