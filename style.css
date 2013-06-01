@@ -47,6 +47,36 @@
 	background-repeat:no-repeat;
 }
 
+#sushi{
+	position: absolute;
+	width:100px;
+	height:68px;
+	left:0px;
+	top:0px;
+	background-image:url('img/sushi.png');
+	background-repeat:no-repeat;
+}
+
+#bite0{
+	position: absolute;
+	width:100px;
+	height:68px;
+	left:0px;
+	top:0px;
+	background-image:url('img/bite0.png');
+	background-repeat:no-repeat;
+}
+
+#bite1{
+	position: absolute;
+	width:100px;
+	height:68px;
+	left:0px;
+	top:0px;
+	background-image:url('img/bite1.png');
+	background-repeat:no-repeat;
+}
+
 .hide{
 	position: absolute; 
 	overflow: hidden; 
