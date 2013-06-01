@@ -97,12 +97,13 @@
 	top:400px;
 }
 
-#nomming{
+#nomnom{
 	position: absolute;
 	width: 100 px;
 	height: 68 px;
 	left: 625 px;
 	top: 350 px;
+	background: #808080;
 }
 
 #begincountdown{
