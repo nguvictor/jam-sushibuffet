@@ -63,8 +63,18 @@
 	position: absolute;
 	width:100px;
 	height:68px;
-	left:0px;
-	top:0px;
+	left:575px;
+	top:340px;
+	background-image:url('img/sushi.png');
+	background-repeat:no-repeat;
+}
+
+#sushiStack{
+	position: absolute;
+	width:100px;
+	height:68px;
+	left:450px;
+	top:400px;
 	background-image:url('img/sushi.png');
 	background-repeat:no-repeat;
 }
