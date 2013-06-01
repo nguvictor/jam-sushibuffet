@@ -1,22 +1,19 @@
 var sushiStack = 0; //up to 10
 var fatassScore = 0;
 
-//This is the prototype for chef to send a sushi
+var nommingSushi = false;
+
+
 function addSushi(){
 	console.log('adding sushi');
-	sushiStack+=1;
-	
-	//$('#stack').append('<div id="stack_sushi" style="bottom:25px;"></div>')
+	sushiStack+=1;	
 	$('#stack').append('<div id="stack_sushi" style="bottom:'+sushiStack*25+'px;"></div>')
 }
 
 
 function removeSushi(){
-	//count latest.
-	//look at stack... traverse it... 
-	//console.log ( $("stack:last-child") );
-	$("#stack div").last().remove(); //css('background-color','red');
-	console.log ("derp");
+	console.log('removing sushi');
+	$("#stack div").last().remove();
 }
 
 
@@ -29,14 +26,16 @@ $(document).ready(function() {
 	addSushi();
 	addSushi();
 	addSushi();
+	
+	
 
 	
 	//Eat a piece of the sushi
 	function nomSushi(){
 		switch(nomsRemaining){
-			case 2: placeSushi(); nomsRemaining-=1; break; //take a bite
-			case 1: showBite1(); nomsRemaining-=1; break; //completed noming, replace if exists
-			case 0: cleanPlate();  fatassScore+=1;$('#fatassScore').text("Score: "+fatassScore); break; //take another bite
+			case 2: placeSushi(); console.log( nommingSushi ); nomsRemaining-=1; break; //take from pile
+			case 1: showBite1(); console.log( nommingSushi ); nomsRemaining-=1; break; //take bite 
+			case 0: cleanPlate();  console.log( nommingSushi );  break; //take last bite
 		}
 	}
 	
@@ -44,9 +43,10 @@ $(document).ready(function() {
 	function placeSushi(){
 		removeSushi();
 		if (sushiStack>0){
-			showSushi();
+			showSushiOnPlate();
 			sushiStack-=1;
 			nomsRemaining=2
+			nommingSushi = true;
 		}
 
 	}
@@ -56,12 +56,15 @@ $(document).ready(function() {
 		$('#sushi').addClass('hide');
 	}
 
-	function showSushi(){
+	function showSushiOnPlate(){
 		$('#sushi').removeClass('hide');
 	}
 	
 	function cleanPlate(){
-		
+		if (nommingSushi == true){
+			fatassScore+=1;$('#fatassScore').text("Score: "+fatassScore);
+		}
+		nommingSushi = false;
 		$('#bite1').addClass('hide');
 		if (sushiStack > 0){
 			nomsRemaining = 2;
