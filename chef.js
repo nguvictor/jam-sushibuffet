@@ -29,7 +29,7 @@ $(document).ready(function() {
 	
 	
 	//Catch the keyboard Events
-	$(document).keydown(function(event) {
+	$(document).keyup(function(event) {
 	  if (event.which == 83) {
 		addPiece();
 	   }
