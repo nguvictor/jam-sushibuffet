@@ -61,7 +61,7 @@
 	position: absolute;
 	width:100px;
 	height:68px;
-	left:0px;
+	left:50px;
 	top:0px;
 	background-image:url('img/bite0.png');
 	background-repeat:no-repeat;
@@ -71,7 +71,7 @@
 	position: absolute;
 	width:100px;
 	height:68px;
-	left:0px;
+	left:100px;
 	top:0px;
 	background-image:url('img/bite1.png');
 	background-repeat:no-repeat;
