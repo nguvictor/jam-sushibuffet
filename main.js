@@ -5,7 +5,7 @@
 
 $(document).ready(function() {
 	var beginCountDownNumber = 0; //Count down to begin
-	var countDown = 20; //Count down until game ends
+	var countDown = 10; //Count down until game ends
 	//Show Dialog press spacee to start
 	
 	//Regular Count down
@@ -20,9 +20,18 @@ $(document).ready(function() {
 		});
 		
 		if(countDown == 0){
-			$('#countdown').text("Go");
+			isControlEnabled = false;
+			$('#countdown').text("0");
 			$('#countdown').addClass('hide');
 			$('#countdown').removeClass('hide');
+			
+			if(chefScore == fatassScore)
+				$('#result').text('Tie!');
+			else if(chefScore > fatassScore)
+				$('#result').text('Left Side Wins');
+			else if(chefScore < fatassScore)
+				$('#result').text('Right Side Wins');
+			$('#result').removeClass('hide');
 			//CountDownStep();
 		}
 		else

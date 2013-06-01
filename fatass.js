@@ -79,4 +79,9 @@ $(document).ready(function() {
 			nomSushi();
 		}
 	});
+	
+	$("#right").click(function() {
+		if(isControlEnabled)
+			nomSushi();
+	});
 });
