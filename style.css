@@ -40,6 +40,41 @@
 	background-repeat:no-repeat;
 }
 
+
+#chef{
+	position: absolute;
+	width:300px;
+	height:261px;
+	left:25px;
+	top:100px;
+	background-image:url('img/chef.png');
+	background-repeat:no-repeat;
+}
+
+
+
+#fatass{
+	position: absolute;
+	width:300px;
+	height:254px;
+	left:475px;
+	top:100px;
+	background-image:url('img/fatass.png');
+	background-repeat:no-repeat;
+}
+
+
+#table{
+	position: absolute;
+	width:750px;
+	height:387px;
+	left:25px;
+	top:300px;
+	background-image:url('img/table.png');
+	background-repeat:no-repeat;
+}
+
+
 #rice{
 	position: absolute;
 	width:100px;
