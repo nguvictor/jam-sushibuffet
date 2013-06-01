@@ -89,4 +89,18 @@ $(document).ready(function() {
 		  }
 	   }
 	});
+	
+	
+	$("#dialog").click(function() {
+	
+		  if(!isRunning){
+			$('#dialog').css( 'z-index', '3' )
+
+			//Display initial countdown!
+			beginCountDown();
+			isRunning = true;
+			}
+		 
+	});
+	
 });
