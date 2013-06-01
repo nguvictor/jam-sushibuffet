@@ -35,4 +35,11 @@ $(document).ready(function() {
 		addPiece();
 	   }
 	});
+	
+	$("#left").click(function() {
+		if(isControlEnabled)
+			addPiece();
+	});
+
+
 });

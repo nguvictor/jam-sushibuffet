@@ -132,7 +132,7 @@
 	top:150px;
 	left: 350px;
 	font-size: 4em;
-	font-align: center;
+	text-align: center;
 }
 
 #countdown{
@@ -143,7 +143,7 @@
 	left:350px;
 	top: 0px;
 	font-size: 4em;
-	font-align: center;
+	text-align: center;
 }
 
 
