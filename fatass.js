@@ -17,9 +17,32 @@ $(document).ready(function() {
 	
 	//Eat a piece of the sushi
 	function nomSushi(){
-		//if exists 1
+		switch(nomsRemaining){
+			case 2: showBite0();nomsRemaining-=1;break; //take a bite
+			case 1: showBite1();nomsRemaining-=1;break; //take another bite
+			case 0: refreshPlate();addSushi(); nomsRemaining=2;break; //completed noming, replace if exists
+		}
 	}
+	
+	function refreshPlate(){
+		if (sushiPieces>0){
+			showSushi();
+		}
 
+	}
+	
+	function showSushi(){
+		$('#rice').removeClass('hide');
+	}
+	
+	function showBite0(){
+		$('#rice').removeClass('hide');
+	}
+	
+	function showBite1(){
+		$('#rice').removeClass('hide');
+	}
+	
 
 	//Catch the keyboard Events
 	$(document).keyup(function(event) {

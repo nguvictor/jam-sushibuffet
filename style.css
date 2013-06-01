@@ -97,6 +97,14 @@
 	top: 0px;
 }
 
+#nomming{
+	position: absolute;
+	width: 100 px;
+	height: 68 px;
+	left: 625 px;
+	top: 350 px;
+}
+
 #begincountdown{
 	position: absolute;
 	width:100px;
