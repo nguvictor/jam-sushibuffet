@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 	//Catch the keyboard Events
 	$(document).keyup(function(event) {
-	  if (event.which == 76) {
+	  if (event.which == 76 && isControlEnabled) {
 		 alert('fatass');
 		 nomSushi();
 	   }

@@ -30,7 +30,7 @@ $(document).ready(function() {
 	
 	//Catch the keyboard Events
 	$(document).keyup(function(event) {
-	  if (event.which == 83) {
+	  if (event.which == 83 && isControlEnabled ) {
 		addPiece();
 	   }
 	});
