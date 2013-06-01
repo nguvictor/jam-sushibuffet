@@ -17,6 +17,7 @@
 	margin-left:auto;
 	margin-right:auto;
 	position: relative;
+	overflow: hidden;
 }
 
 #board{
@@ -59,22 +60,13 @@
 	background-repeat:no-repeat;
 }
 
-#sushi{
-	position: absolute;
-	width:100px;
-	height:68px;
-	
-	background-image:url('img/sushi.png');
-	background-repeat:no-repeat;
-}
-
 
 #bite0{
 	position: absolute;
 	width:100px;
 	height:68px;
-	left:50px;
-	top:0px;
+	left:590px;
+	top:337px;
 	background-image:url('img/bite0.png');
 	background-repeat:no-repeat;
 }
@@ -83,9 +75,31 @@
 	position: absolute;
 	width:100px;
 	height:68px;
-	left:100px;
-	top:0px;
+	left:590px;
+	top:337px;
 	background-image:url('img/bite1.png');
+	background-repeat:no-repeat;
+}
+
+
+#sushi{
+	position: absolute;
+	width:100px;
+	height:68px;
+	left:590px;
+	top:337px;
+	background-image:url('img/sushi.png');
+	background-repeat:no-repeat;
+}
+
+
+#stack_sushi{
+	position: absolute;
+	width:100px;
+	height:68px;
+	
+
+	background-image:url('img/sushi.png');
 	background-repeat:no-repeat;
 }
 
@@ -94,17 +108,9 @@
 	width:100px;
 	height:68px;
 	left:450px;
-	top:400px;
+	top:425px;
 }
 
-#nomnom{
-	position: absolute;
-	width: 100 px;
-	height: 68 px;
-	left: 625 px;
-	top: 350 px;
-	background: #808080;
-}
 
 #begincountdown{
 	font-family:"radiolandregular";

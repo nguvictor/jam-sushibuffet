@@ -1,14 +1,22 @@
-var sushiPieces = 0; //up to 10
+var sushiStack = 0; //up to 10
 
-//Add a sushi to the pile
-function stackSushi(){
-	sushiPieces+=1;
-}
 
 //This is the prototype for chef to send a sushi
 function addSushi(){
 	console.log('adding sushi');
-	stackSushi();
+	sushiStack+=1;
+	
+	//$('#stack').append('<div id="stack_sushi" style="bottom:25px;"></div>')
+	$('#stack').append('<div id="stack_sushi" style="bottom:'+sushiStack*25+'px;"></div>')
+}
+
+
+function removeSushi(){
+	//count latest.
+	//look at stack... traverse it... 
+	//console.log ( $("stack:last-child") );
+	$("#stack div").last().remove(); //css('background-color','red');
+	console.log ("derp");
 }
 
 
@@ -17,42 +25,55 @@ function addSushi(){
 $(document).ready(function() {
 	
 	var nomsRemaining = 2;
+	
+	addSushi();
+	addSushi();
+	addSushi();
 
 	
 	//Eat a piece of the sushi
 	function nomSushi(){
 		switch(nomsRemaining){
-			case 2: showBite0();nomsRemaining-=1;break; //take a bite
-			case 1: showBite1();nomsRemaining-=1;break; //take another bite
-			case 0: refreshPlate();addSushi(); nomsRemaining=2;break; //completed noming, replace if exists
+			case 2: placeSushi(); nomsRemaining-=1; break; //take a bite
+			case 1: showBite1(); nomsRemaining-=1; break; //completed noming, replace if exists
+			case 0: cleanPlate();  break; //take another bite
 		}
 	}
 	
-	function refreshPlate(){
-		if (sushiPieces>0){
+	//take from pile and put on plate
+	function placeSushi(){
+		removeSushi();
+		if (sushiStack>0){
 			showSushi();
+			sushiStack-=1;
+			nomsRemaining=2
 		}
 
 	}
 	
-	function showSushi(){
-		$('#rice').removeClass('hide');
-	}
-	
-	function showBite0(){
-		$('#rice').removeClass('hide');
-	}
-	
 	function showBite1(){
-		$('#rice').removeClass('hide');
+		$('#bite1').removeClass('hide');
+		$('#sushi').addClass('hide');
+	}
+
+	function showSushi(){
+		$('#sushi').removeClass('hide');
+	}
+	
+	function cleanPlate(){
+		
+		$('#bite1').addClass('hide');
+		if (sushiStack > 0){
+			nomsRemaining = 2;
+		}
+		
 	}
 	
 
 	//Catch the keyboard Events
 	$(document).keyup(function(event) {
 		if (event.which == 76 && isControlEnabled) {
-		 
-		nomSushi();
+			nomSushi();
 		}
 	});
 });
