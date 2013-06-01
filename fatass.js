@@ -1,7 +1,7 @@
 	//This is the prototype for chef to send a sushi
 	function addSushi(){
 		console.log('adding sushi');
-		//stack sushi
+		stackSushi();
 	}
 
 $(document).ready(function() {
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	
 	//Add a sushi to the pile
 	function stackSushi(){
-		
+		sushiPieces+=1;
 	}
 	
 	//Eat a piece of the sushi
