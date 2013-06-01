@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'radiolandregular';
+    src: url('radioland-webfont.eot');
+    src: url('radioland-webfont.eot?#iefix') format('embedded-opentype'),
+         url('radioland-webfont.woff') format('woff'),
+         url('radioland-webfont.ttf') format('truetype'),
+         url('radioland-webfont.svg#radiolandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 #game{
 	width:800px;
 	height:600px;
@@ -78,6 +90,31 @@
 }
 
 #stack{
+	position: absolute;
+	width:100px;
+	height:500px;
+	left: 475px;
+	top: 0px;
+}
+
+#begincountdown{
+	position: absolute;
+	width:100px;
+	height:500px;
+	left: 475px;
+	top: 0px;
+}
+
+#countdown{
+	position: absolute;
+	width:100px;
+	height:500px;
+	left: 475px;
+	top: 0px;
+}
+
+
+#dialog{
 	position: absolute;
 	width:100px;
 	height:500px;
