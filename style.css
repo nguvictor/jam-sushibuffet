@@ -63,21 +63,11 @@
 	position: absolute;
 	width:100px;
 	height:68px;
-	left:575px;
-	top:340px;
+	
 	background-image:url('img/sushi.png');
 	background-repeat:no-repeat;
 }
 
-#sushiStack{
-	position: absolute;
-	width:100px;
-	height:68px;
-	left:450px;
-	top:400px;
-	background-image:url('img/sushi.png');
-	background-repeat:no-repeat;
-}
 
 #bite0{
 	position: absolute;
@@ -102,9 +92,9 @@
 #stack{
 	position: absolute;
 	width:100px;
-	height:500px;
-	left: 475px;
-	top: 0px;
+	height:68px;
+	left:450px;
+	top:400px;
 }
 
 #begincountdown{
