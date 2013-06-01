@@ -20,8 +20,8 @@ $(document).ready(function() {
 	
 	function addPiece(){
 		switch(pieceCount){
-			case 0: addRice();break; //Place the rice
-			case 1: addFish();break; //place the fish
+			case 0: addRice();pieceCount+=1;break; //Place the rice
+			case 1: addFish();pieceCount+=1;break; //place the fish
 			case 2: cleanBoard();addSushi(); pieceCount = 0;break; //sushi is complete send over the sushi and restart
 			
 		}
@@ -32,7 +32,6 @@ $(document).ready(function() {
 	$(document).keydown(function(event) {
 	  if (event.which == 83) {
 		addPiece();
-		pieceCount+=1;
 	   }
 	});
 });
