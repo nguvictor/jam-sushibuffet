@@ -10,7 +10,6 @@ $(document).ready(function() {
 	
 	//Regular Count down
 	function CountDownStep(){
-		console.log("Cot down step");
 		setTimeout(function(){
 			
 			//If we still have time on the clock keep counting down
