@@ -1,5 +1,5 @@
 var sushiStack = 0; //up to 10
-
+var fatassScore = 0;
 
 //This is the prototype for chef to send a sushi
 function addSushi(){
@@ -36,7 +36,7 @@ $(document).ready(function() {
 		switch(nomsRemaining){
 			case 2: placeSushi(); nomsRemaining-=1; break; //take a bite
 			case 1: showBite1(); nomsRemaining-=1; break; //completed noming, replace if exists
-			case 0: cleanPlate();  break; //take another bite
+			case 0: cleanPlate();  fatassScore+=1;$('#fatassScore').text("Score: "+fatassScore); break; //take another bite
 		}
 	}
 	

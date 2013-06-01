@@ -23,7 +23,7 @@ $(document).ready(function() {
 		switch(pieceCount){
 			case 0: addRice();pieceCount+=1;break; //Place the rice
 			case 1: addFish();pieceCount+=1;break; //place the fish
-			case 2: cleanBoard();addSushi(); pieceCount = 0;chefScore+=0;break; //sushi is complete send over the sushi give chef a point and restart
+			case 2: cleanBoard();addSushi(); pieceCount = 0;chefScore+=1;$('#chefScore').text("Score: "+chefScore);break; //sushi is complete send over the sushi give chef a point and restart
 			
 		}
 	}
