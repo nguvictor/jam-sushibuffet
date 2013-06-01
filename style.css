@@ -16,6 +16,25 @@
 	background-image:url('img/board.png');
 	background-repeat:no-repeat;
 }
+#rice{
+	position: absolute;
+	width:100px;
+	height:68px;
+	left:200px;
+	top:340px;
+	background-image:url('img/rice.png');
+	background-repeat:no-repeat;
+}
+
+#fish{
+	position: absolute;
+	width:100px;
+	height:68px;
+	left:200px;
+	top:340px;
+	background-image:url('img/fish.png');
+	background-repeat:no-repeat;
+}
 
 .hide{
 	position: absolute; 
