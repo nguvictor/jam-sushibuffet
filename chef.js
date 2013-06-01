@@ -31,7 +31,6 @@ $(document).ready(function() {
 	//Catch the keyboard Events
 	$(document).keydown(function(event) {
 	  if (event.which == 83) {
-		console.log('adding Piece');
 		addPiece();
 		pieceCount+=1;
 	   }
