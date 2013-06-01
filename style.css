@@ -100,26 +100,29 @@
 #begincountdown{
 	position: absolute;
 	width:100px;
-	height:500px;
-	left: 475px;
-	top: 0px;
+	height:100px;
+	top:150px;
+	left: 350px;
+	background-color: #000;
 }
 
 #countdown{
 	position: absolute;
 	width:100px;
-	height:500px;
-	left: 475px;
+	height:100px;
+	left:350px;
 	top: 0px;
+	background-color: #444;
 }
 
 
 #dialog{
 	position: absolute;
-	width:100px;
-	height:500px;
-	left: 475px;
-	top: 0px;
+	width:600px;
+	height:300px;
+	left: 100px;
+	top: 100px;
+	background-color: #888;
 }
 
 .hide{
