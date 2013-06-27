@@ -1,11 +1,40 @@
 <!doctype html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<LINK href="style.css" rel="stylesheet" type="text/css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+		<script src="hammer.min.js"></script>
 		<script src="main.js"></script>
 		<script src="chef.js"></script>
 		<script src="fatass.js"></script>
+		
+		<!--Try using touch library hammer.js-->
+		
+		<script>
+		(function($) {
+		  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
+		  $.fn.nodoubletapzoom = function() {
+			if (IS_IOS)
+			  $(this).bind('touchstart', function preventZoom(e) {
+				var t2 = e.timeStamp
+				  , t1 = $(this).data('lastTouch') || t2
+				  , dt = t2 - t1
+				  , fingers = e.originalEvent.touches.length;
+				$(this).data('lastTouch', t2);
+				if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+		 
+				e.preventDefault(); // double tap - prevent the zoom
+				// also synthesize click events we just swallowed up
+				$(this).trigger('click').trigger('click');
+			  });
+			 
+		  };
+		})(jQuery);
+		$('body,#game,#left,#right').nodoubletapzoom();
+		
+		
+		</script>
 	</head>
 	
 	<div id="game" >

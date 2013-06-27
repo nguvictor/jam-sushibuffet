@@ -79,9 +79,28 @@ $(document).ready(function() {
 			nomSushi();
 		}
 	});
-	
+	/*
 	$("#right").click(function() {
 		if(isControlEnabled)
 			nomSushi();
-	});
+	});*/
+	
+	function handleHammer(ev) {
+            console.log(ev);
+            // disable browser scrolling
+            ev.gesture.preventDefault();
+
+            switch(ev.type) {
+                case 'tap':
+					nomSushi();
+                    break;
+				case 'doubletap':
+					nomSushi();
+                    break;
+            }
+        }
+
+
+		$('#right').hammer({ drag_lock_to_axis: true })
+            .on("tap doubletap", handleHammer);
 });

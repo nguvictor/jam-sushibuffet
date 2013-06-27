@@ -35,11 +35,31 @@ $(document).ready(function() {
 		addPiece();
 	   }
 	});
-	
+	/*
 	$("#left").click(function() {
 		if(isControlEnabled)
 			addPiece();
-	});
+	});*/
+	function handleHammer(ev) {
+            console.log(ev);
+            // disable browser scrolling
+            ev.gesture.preventDefault();
+
+            switch(ev.type) {
+                case 'tap':
+					addPiece();
+                    break;
+				case 'doubletap':
+					addPiece();
+                    break;
+            }
+        }
+		
+
+
+        $('#left').hammer({ drag_lock_to_axis: true })
+            .on("tap doubletap", handleHammer);
+
 
 
 });
